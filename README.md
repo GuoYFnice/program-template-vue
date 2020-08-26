@@ -1,24 +1,25 @@
 # program-template-vue
 
-## Project setup
+## vue+ts
+这是一个vue项目的模板，持续更新
+
+### 下载依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 开启
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 打包
 ```
 npm run build
 ```
 
-### Run your unit tests
+### 单元测试
 ```
 npm run test:unit
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
