@@ -1,18 +1,85 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <el-container>
+      <el-header>
+        <Header title="VUE_TEMPLATE"/>
+      </el-header>
+      <el-container>
+        <el-aside width="200px">
+          <Menu/>
+        </el-aside>
+        <el-main>
+          <Breadcrumb/>
+          <div class="content">
+            <PageTitle/>
+            <router-view/>
+          </div>
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Menu from './components/Menu.vue'
+import Header from './components/Header.vue'
+import PageTitle from './components/PageTitle.vue'
+import Breadcrumb from './components/Breadcrumb.vue'
 
 @Component({
   components: {
-    HelloWorld,
+    Menu,
+    Header,
+    PageTitle,
+    Breadcrumb
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  // ? Data.
+  // value1:number = 123;
+  // todoList: TodoArrayList = [];
+  // // ? Life Cycle.
+  private created(): void {
+  }
+  // // ? Methods.
+  // // ? 获取 todos 列表方法。
+  // private async getTodoList(url: string): Promise<void> {
+  //   const res = await (getList(url, {}) as any) as TodoArrayList;
+  //   this.todoList = res;
+  // }
+  // // ? 子组件通知刷新列表方法。
+  // private handleReload(): void {
+  //   this.getTodoList(`/todos`);
+  // }
+}
 </script>
+<style lang="scss">
+.home {
+  .el-header {
+    border: 1px solid #e5e5e5;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+  .el-aside {
+    height: calc( 100vh - 80px );
+    border: 1px solid #e5e5e5;
+    color: #333;
+    line-height: 200px;
+  }
+  .el-main {
+    height: calc( 100vh - 80px );
+    border: 1px solid #e5e5e5;
+    color: #333;
+    text-align: center;
+    background: #e5e5e5;
+    line-height: 160px;
+  }
+  .content {
+    background: #fff;
+    height: calc(100% - 30px);
+    padding: 0 20px;
+  }
+}
+</style>
