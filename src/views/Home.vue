@@ -36,22 +36,8 @@ import Breadcrumb from './components/Breadcrumb.vue'
   },
 })
 export default class Home extends Vue {
-  // ? Data.
-  // value1:number = 123;
-  // todoList: TodoArrayList = [];
-  // // ? Life Cycle.
   private created(): void {
   }
-  // // ? Methods.
-  // // ? 获取 todos 列表方法。
-  // private async getTodoList(url: string): Promise<void> {
-  //   const res = await (getList(url, {}) as any) as TodoArrayList;
-  //   this.todoList = res;
-  // }
-  // // ? 子组件通知刷新列表方法。
-  // private handleReload(): void {
-  //   this.getTodoList(`/todos`);
-  // }
 }
 </script>
 <style lang="scss">
